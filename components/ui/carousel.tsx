@@ -1,8 +1,8 @@
 import { motion } from 'framer-motion';
 import * as React from 'react';
 import { useEffect, useRef, useState } from 'react';
-import image from '../image';
-import images from '../image'
+import image from '../../data/image';
+import images from '../../data/image'
 import { useSwipeable } from 'react-swipeable'
 
 

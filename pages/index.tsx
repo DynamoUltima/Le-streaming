@@ -4,6 +4,8 @@ import Image from 'next/image'
 import Nav from './nav'
 import styles from '../styles/Home.module.css'
 import CarouselSlider from '../components/ui/carousel'
+import SquareCard from '../components/ui/squareCard'
+import RectangularCard from '../components/ui/rectangularCard'
 
 const Home: NextPage = () => {
   return (
@@ -74,46 +76,13 @@ const Home: NextPage = () => {
 
               </div>
 
-              <ul className='flex flex-row space-x-5 overflow-x-auto px-10 '>
+              <ul className='flex flex-row space-x-5 overflow-x-auto px-10  overflow-y-hidden '>
                 {/* Cards */}
 
-                <div className=' h-72  aspect-square flex flex-col -z-50" '>
-                  <div className='relative  z-0 w-full h-full'>
-
-                    <img src={'/singer.jpeg'} alt="list" className='object-cover h-64 -z-5' />
-
-                    <div className='absolute inset-y-0 inset-x-0  grid items-center justify-center'>
-                      <div className='rounded-full w-20 h-20 bg-black bg-opacity-40  justify-center flex items-center '>
-
-                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-500 " viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
-                        </svg>
-
-                      </div>
-                    </div>
-                  </div>
-
-
-                  <div className='py-2 text-start'>Lorem ipsum dolor</div>
-                </div>
-
-                <div className='h-72  aspect-square flex  flex-col '>
-                  <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                  <div className='py-2 text-start'>Lorem ipsum dolor</div>
-                </div>
-
-                <div className='h-72  aspect-square flex  flex-col '>
-                  <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                  <div className='py-2 text-start'>Lorem ipsum dolor</div>
-                </div>
-
-                <div className='h-72  aspect-square flex  flex-col '>
-                  <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                  <div className='py-2 text-start'>Lorem ipsum dolor</div>
-                </div>
-
-
-
+                <SquareCard />
+                <SquareCard />
+                <SquareCard />
+                <SquareCard />
 
 
 
@@ -132,41 +101,15 @@ const Home: NextPage = () => {
 
             <ul className='flex flex-col px-4 space-y-2  h-72  overflow-auto'>
 
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
+              <RectangularCard />
 
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
+              <RectangularCard />
 
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
+              <RectangularCard />
 
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
+              <RectangularCard />
+
+
 
 
 
@@ -182,13 +125,14 @@ const Home: NextPage = () => {
         {/* Recent Plays */}
 
         <div className=' md:grid grid-cols-4'>
-          <div className=' col-span-2 overflow-auto'>
+          <div className=' col-span-2 overflow-auto text-white'>
             Recently Played
             <div>
 
               <ul className='flex flex-col space-y-5'>
 
                 <div className='h-32   rectangle flex flex-row justify-between '>
+
                   <div className='flex flex-row'>
                     <img src={'/singer.jpeg'} alt="list" className=' max-h-36 aspect-square p-3' />
 
@@ -242,52 +186,23 @@ const Home: NextPage = () => {
 
           </div>
 
+
+          {/* My Favourites */}
+
           <div className=''>
             <div className='py-2 px-5 text-white'> My Favourites</div>
 
             {/* Horizontal List */}
 
 
-
             <ul className='flex flex-col px-4 space-y-2  h-72  overflow-auto'>
 
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
-
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
-
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
-
-              <div className='h-32  bg-slate-800 rectangle flex flex-row '>
-
-                <img src={'/singer.jpeg'} alt="list" className=' w-2/5 p-3' />
-                <div className='py-2 text-start space-y-2 justify-between flex flex-col'>
-                  <div className='text-lg text-white font-semibold'>Lorem ipsum dolor</div>
-                  <div className='text-sm text-slate-300 font-light'>Pastor Elikem</div>
-                  <div className='text-sm text-slate-300 font-light'>25 June 2022</div>
-                </div>
-              </div>
+              <RectangularCard />
+              <RectangularCard />
+              <RectangularCard />
+              <RectangularCard />
+              <RectangularCard />
+              <RectangularCard />
 
 
             </ul>
@@ -302,38 +217,18 @@ const Home: NextPage = () => {
           <div className='text-white py-2'>Recent Upload</div>
 
           <div className='flex'>
-
+            {/* Recent Uploads */}
             <div className='md:grid grid-cols-3 gap-4'>
 
-              <div className='h-72  aspect-square flex  flex-col '>
-                <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                <div className='py-2 text-start text-white'>Lorem ipsum dolor</div>
-              </div>
+              <SquareCard />
+              <SquareCard />
+              <SquareCard />
+              <SquareCard />
+              <SquareCard />
+              <SquareCard />
 
-              <div className='h-72  aspect-square flex  flex-col '>
-                <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                <div className='py-2 text-start text-white'>Lorem ipsum dolor</div>
-              </div>
 
-              <div className='h-72  aspect-square flex  flex-col '>
-                <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                <div className='py-2 text-start text-white'>Lorem ipsum dolor</div>
-              </div>
 
-              <div className='h-72  aspect-square flex  flex-col '>
-                <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                <div className='py-2 text-start text-white'>Lorem ipsum dolor</div>
-              </div>
-
-              <div className='h-72  aspect-square flex  flex-col '>
-                <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                <div className='py-2 text-start text-white'>Lorem ipsum dolor</div>
-              </div>
-
-              <div className='h-72  aspect-square flex  flex-col '>
-                <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
-                <div className='py-2 text-start text-white'>Lorem ipsum dolor</div>
-              </div>
 
 
             </div>
