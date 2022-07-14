@@ -3,14 +3,14 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Nav from './nav'
 import styles from '../styles/Home.module.css'
-import CarouselSlider from '../components/carousel'
+import CarouselSlider from '../components/ui/carousel'
 
 const Home: NextPage = () => {
   return (
 
 
 
-    <div className=" w-full min-w-full m-auto flex-col h-screen  bg-deepBlue overflow-auto p-5 ">
+    <div className=" w-full min-w-full m-auto flex-col h-screen  bg-black overflow-auto p-5 ">
       <Nav />
 
       {/* <div className='bg-blue-500'>
@@ -50,12 +50,12 @@ const Home: NextPage = () => {
 
 
 
-            {/* <Image src={'/singer.jpeg'} height="200" width={'500'} objectFit="cover" alt="carousel"/> */}
-            {/* <img src={'/singer.jpeg'} alt="carousel" className='w-full h-96 object-cover pb-16 ' /> */}
-            <CarouselSlider/>
+          {/* <Image src={'/singer.jpeg'} height="200" width={'500'} objectFit="cover" alt="carousel"/> */}
+          {/* <img src={'/singer.jpeg'} alt="carousel" className='w-full h-96 object-cover pb-16 ' /> */}
+          <CarouselSlider />
           {/* </div> */}
 
-        
+
 
         </div>
 
@@ -77,8 +77,23 @@ const Home: NextPage = () => {
               <ul className='flex flex-row space-x-5 overflow-x-auto px-10 '>
                 {/* Cards */}
 
-                <div className='h-72  aspect-square flex flex-col '>
-                  <img src={'/singer.jpeg'} alt="list" className='object-cover h-64' />
+                <div className=' h-72  aspect-square flex flex-col -z-50" '>
+                  <div className='relative  z-0 w-full h-full'>
+
+                    <img src={'/singer.jpeg'} alt="list" className='object-cover h-64 -z-5' />
+
+                    <div className='absolute inset-y-0 inset-x-0  grid items-center justify-center'>
+                      <div className='rounded-full w-20 h-20 bg-black bg-opacity-40  justify-center flex items-center '>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-12 w-12 text-blue-500 " viewBox="0 0 20 20" fill="currentColor">
+                          <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clipRule="evenodd" />
+                        </svg>
+
+                      </div>
+                    </div>
+                  </div>
+
+
                   <div className='py-2 text-start'>Lorem ipsum dolor</div>
                 </div>
 
