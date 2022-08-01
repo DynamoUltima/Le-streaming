@@ -218,7 +218,7 @@ const Home: NextPage = () => {
 
           <div className='flex'>
             {/* Recent Uploads */}
-            <div className='md:grid grid-cols-3 gap-4'>
+            <div className='md:grid grid-cols-3 md:gap-4  gap-4'>
 
               <SquareCard />
               <SquareCard />
